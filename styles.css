@@ -1,0 +1,447 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+
+/* Welcome Section Styling */
+.welcome {
+  background-color: rgb(255, 255, 255);
+  height: 300px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center; /* Center the text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome h1 {
+  color: #FFCB05; /* Change this to match your desired color */
+  font-size: 3rem;
+}
+
+#welcome-typed-text {
+  font-size: 1.5rem;
+  color: #ffffff; /* Adjust to match the contrast */
+}
+
+/* Navbar Styling */
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.navbar {
+  background-color: white;
+  /* White background */
+  padding: 10px 20px;
+  /* Adjust padding to control the height */
+  position: fixed;
+  /* Fixes navbar at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Optional shadow for better visibility */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #212529;
+  /* Default link color */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFCB05;
+  /* Hover color */
+}
+
+.nav-link.active {
+  color: #FFCB05 !important;
+  /* Active link color */
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #FFCB05;
+  /* Line under active link */
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Optional: Smooth scroll offset for fixed navbar */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 70px;
+  /* Add padding to prevent overlap with fixed navbar */
+}
+
+/* Buttons */
+.learn-more, .btn {
+  background-color: #FFCB05; /* Yellow */
+  color: #002147; /* Navy text */
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.learn-more:hover, .btn:hover {
+  background-color: #2F2959; /* Navy blue on hover */
+  color: #ffffff;
+}
+
+/* Footer */
+footer {
+  background-color: #002147; /* Navy blue */
+  color: #FFCB05; /* Yellow for the text */
+}
+
+.contact-icon:hover {
+  color: #FFCB05; /* Yellow on hover */
+}
+
+/* Hero Section */
+
+.carousel-caption h5 {
+  font-size: 3rem;
+  color: #FFCB05; /* Yellow */
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+  color: #ffffff; /* White for text */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px; /* Space out the items */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem; /* Make links larger */
+  font-weight: bold; /* Optional: Make text bold */
+  color: #2F2959; /* Default link color */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFCB05; /* Change color on hover */
+}
+
+.nav-link.active {
+  position: relative;
+  color: #FFCB05 !important; /* Change color for active link */
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Adjust position as needed */
+  width: 100%;
+  height: 2px; /* Thickness of the solid line */
+  background-color: #FFCB05; /* Line color */
+  animation: slideIn 0.5s ease forwards;
+}
+
+.logo {
+  width: 250px; /* Adjust logo size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Carousel Styling */
+/* .container-inner {
+  height: 800px;
+}
+
+.carousel-image {
+  height: 800px;
+} */
+
+/* Styling for the banner */
+/* Styling for the banner */
+/* Styling for the banner */
+/* Styling for the banner */
+.banner {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  max-height: 700px;
+  object-fit: cover;
+}
+
+/* Styling for the text content on the banner */
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  /* Position for sliding */
+  transform: translateY(-50%);
+  background-color: rgba(124, 124, 124, 0.5);
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 40%;
+  text-align: justify;
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 0.5s ease, left 0.5s ease;
+  /* Transition for smooth visibility and sliding */
+}
+/* Animation for smooth text appearance */
+.banner-text.visible {
+  opacity: 1;
+  left: 5%;
+  transition: opacity 0.5s ease, left 0.5s ease;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* .explore-btn {
+  background-color: #f1c40f;
+  color: #002147;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.explore-btn:hover {
+  background-color: #002147;
+  color: white;
+} */
+
+/* Animation for smooth text appearance */
+.banner-text.visible {
+  opacity: 1;
+  /* Make it visible when scrolled into view */
+  left: 5%;
+  /* Slide to the visible position */
+}
+
+/* value- proposition styling */
+.value-proposition {
+  background-color: #f8f9fa; /* Light background */
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: #FFCB05 2px solid;
+}
+
+.value-proposition h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.value-proposition p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis */
+  transition: box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  color: #FFCB05; /* yellow */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #2F2959;
+  margin-bottom: 15px;
+}
+
+/* learnmore button */
+
+.learn-more {
+  background-color: #FFCB05; /* Blue button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Package Details Section */
+.package-details {
+  background-color: #ffffff;
+  /* Light background for contrast */
+  padding: 50px 0;
+}
+
+.package-card {
+  border: none;
+  /* Remove default card border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition for hover effects */
+  height: 350px;
+  /* Fixed height for cards */
+}
+
+.card-img-top {
+  height: 200px;
+  /* Fixed height for images */
+  object-fit: cover;
+  /* Ensures images cover the area without stretching */
+  border-radius: 0.25rem;
+  /* Rounded corners for images */
+  transition: transform 0.3s ease;
+  /* Smooth transition for image zoom */
+}
+
+.package-card:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge the card */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  /* Add a shadow on hover */
+}
+
+.card-title {
+  color: #2F2959;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  /* Smooth transition for title color */
+}
+
+.package-card:hover .card-title {
+  color: rgb(255, 165, 0);
+  /* Change color on hover */
+}
+
+.card-text {
+  transition: color 0.3s ease;
+  /* Smooth transition for text color */
+}
+
+.package-card:hover .card-text {
+  color: rgb(80, 80, 80);
+  /* Darker text on hover */
+}
+
+@media (max-width: 768px) {
+  .package-card {
+    margin-bottom: 20px;
+    /* More space between cards on mobile */
+  }
+}
+
+.card-body {
+  color: #606060;
+  background-color: #ffffff8b;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  margin-top: 0px;
+  padding: 150px 20px;
+  background-color: #333;
+  background-image: url('img/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Gray */
+  color: #247cee;
+  overflow: hidden;
+  /* Prevent overflow */
+}
+
+
+
+.hero h1 span {
+  color: #FFCB05; /* Yellow */
+}
+
+/* Button Styling */
+.btn {
+  background-color: #FFCB05;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #001b7f;
+  color: #fff;
+}
+/* testimonials */
+
+
+.testi-footer{
+  background-color: transparent;
+}
+
+/* Footer Styling */
+footer {
+  border-top: #FFCB05 2px solid;
+  background-color: white;
+  height: 200px;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+.contact-icon {
+  margin-right: 10px;
+}
